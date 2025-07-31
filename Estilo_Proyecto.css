@@ -1,0 +1,675 @@
+/* RESET Y ESTILOS BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  overflow: hidden;
+}
+
+/* CONTENEDOR PRINCIPAL */
+main {
+  display: flex;
+  flex-direction: row;
+  width: 700vw;
+  height: 100vh;
+  transition: transform 0.6s ease;
+}
+
+/* SECCIONES GENERALES */
+section {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-top: 8rem;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-bottom: 4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  scroll-margin-top: 9rem;
+}
+
+section 
+
+/* ESTILOS POR SECCIÓN */
+#inicio {
+  background: linear-gradient(135deg, #f0f8f5, #ffffff);
+  text-align: center;
+  justify-content: center;
+}
+
+#inicio p {
+  font-size: 1.3rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 1rem auto;
+}
+
+#emprendimiento
+#dashboard {
+  background-color: #f9f9f9;
+}
+
+#organizaciones {
+  text-align: center;
+  justify-content: flex-start;
+}
+
+
+/* TIPOGRAFÍA Y TEXTOS */
+h1 {
+  font-size: 6rem;
+  color: #006400;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #006400;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 1rem auto;
+}
+
+ul {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+/* MENÚ DE NAVEGACIÓN PRINCIPAL */
+nav {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9;
+  padding: 0.6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  width: fit-content;
+  max-width: 90vw;
+}
+
+nav a {
+  text-decoration: none;
+  color: #006400;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.2rem 0.4rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #228B22;
+}
+
+nav a.active {
+  color: #b8860b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* FLECHAS DE NAVEGACIÓN GENERAL */
+.arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #333;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: #f0f0f0;
+}
+
+.arrow.left {
+  left: 1rem;
+}
+
+.arrow.right {
+  right: 1rem;
+}
+
+/* CARRUSEL DE ORGANIZACIONES */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 900px;
+  max-width: 900px;
+  border: 4px solid transparent;
+  border-image: linear-gradient(135deg, #006400, #b8860b);
+  border-image-slice: 1;
+  border-radius: 20px;
+  
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  /*will-change: transform; */
+}
+
+.org-card {
+  /* max-width: 900px;
+  min-height: 900px; */
+  background-color: #ffffff;
+ /*  padding: 2rem 1.5rem; */
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  transition: opacity 0.6s ease;
+}
+
+.org-card.active {
+  opacity: 1;
+}
+
+.org-card img {
+  /* width: 200px; */
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.org-card h3 {
+  color: #006400;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.org-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.org-card a {
+  color: #007a53;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.arrow-slider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-slider.left {
+  left: -10px;
+}
+
+.arrow-slider.right {
+  right: -10px;
+}
+
+/*SECCION DE DASHBOARD*/
+
+  #dashboard {
+  max-height: 90vh; /* Altura máxima visible */
+  overflow-y: auto; /* Habilita scroll si el contenido excede */
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#dashboard h2,
+.graficos-dinamicos,
+.selector-grafico,
+#contenidoGrafico {
+  text-align: center;
+}
+
+#graficoSelect {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Imagen mostrada con bordes dorado y verde oscuro */
+#imagenGrafico {
+  max-width: 90%;
+  height: auto;
+  margin: 1.5rem auto 0;
+  display: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  /* Bordes dobles */
+  border: 6px solid #006400; /* Verde oscuro */
+  outline: 3px solid gold;   /* Dorado exterior */
+  outline-offset: -6px;
+}
+
+/* Clase para animación de entrada */
+.fade-in {
+  display: block !important;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/* TEST DE CAPACIDAD EMPRENDEDORA */
+#emprendeTest ol {
+  position: relative;
+  height: 260px; /* o más si quieres dar más espacio */
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#emprendeTest li.pregunta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  /* Borde degradado igual al carrusel y modal */
+  border: 4px solid transparent;
+  border-image: linear-gradient(135deg, #006400, #b8860b);
+  border-image-slice: 1;
+
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* TEST DE CAPACIDAD EMPRENDEDORA */
+/* ============================ */
+
+#test {
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#test form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+
+#test form ol {
+  list-style: decimal inside;
+  padding-left: 0;
+}
+
+#test form li {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
+
+#test input[type='radio'] {
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+  accent-color: #006400; /* color verde institucional */
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#test button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background-color: #006400;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#test button:hover {
+  background-color: #228B22;
+}
+
+#resultado {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+
+/* RESPONSIVO */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 3rem 5vw;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .arrow {
+    font-size: 2.5rem;
+    bottom: 2rem;
+    top: auto;
+    transform: none;
+  }
+
+  .arrow.left {
+    left: 1rem;
+  }
+
+  .arrow.right {
+    right: 1rem;
+  }
+
+  .slider-track {
+    gap: 1rem;
+  }
+
+  .org-card {
+    min-width: 260px;
+    max-width: 260px;
+    padding: 1rem;
+  }
+
+  .org-card img {
+    width: 60px;
+  }
+
+  .arrow-slider {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+/* ============================
+   MODAL RESULTADO DEL TEST
+   ============================ */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Se muestra con display: flex */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  
+  /* Borde degradado verde y dorado */
+  border: 4px solid transparent;
+  border-image: linear-gradient(135deg, #006400, #b8860b);
+  border-image-slice: 1;
+}
+
+
+.modal-content p {
+  font-size: 1.2rem;
+  color: #333333;
+  line-height: 1.6;
+  white-space: pre-line; /* para respetar saltos de línea con \n */
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #666666;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #b8860b;
+}
+
+/* Animación de entrada del modal */
+@keyframes aparecerModal {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ============================
+   ESTILO DE PREGUNTA INDIVIDUAL
+   ============================ */
+#test {
+  background-color: #ffffff;
+  
+}
+
+/* =======================
+   SECCIÓN DE NOTICIAS
+   ======================= */
+#noticias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+#noticias h2 {
+  font-size: 2.5rem;
+  color: #006400;
+  margin-bottom: 0.5rem;
+}
+
+#noticias > p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  
+}
+
+/* Contenedor horizontal de noticias */
+#noticias .noticias-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Tarjetas de noticias */
+.noticia {
+  flex: 0 0 300px;
+  background: linear-gradient(135deg, #ffffff, #f1f1f1);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 1.5rem;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, border 0.3s ease;
+  border-image: linear-gradient(to right, #50c878, #d4af37) 1;
+}
+
+.noticia:hover {
+  transform: translateY(-5px);
+  border-image: linear-gradient(to right, #3cb371, #daa520) 1;
+}
+
+.noticia h3 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.noticia p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.noticia a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+.noticia a:hover {
+  text-decoration: underline;
+}
+
+/* =======================
+   SECCIÓN DE CONTACTO
+   ======================= */
+#contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+#contacto h2 {
+  font-size: 2.5rem;
+  color: #006400;
+}
+
+#contacto p {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 750px;
+  line-height: 1.6;
+}
+
+#contacto ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#contacto li a {
+  display: inline-block;
+  padding: 0.9rem 1.4rem;
+  background: linear-gradient(135deg, #ffffff, #f7f7f7);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  border-image: linear-gradient(to right, #50c878, #d4af37) 1;
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+#contacto li a:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #f0f8f5, #fffde6);
+  border-image: linear-gradient(to right, #3cb371, #daa520) 1;
+}

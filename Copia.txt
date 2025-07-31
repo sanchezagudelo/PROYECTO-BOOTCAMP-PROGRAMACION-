@@ -1,0 +1,62 @@
+<!-- <p>Explora datos históricos, filtra por características y visualiza gráficos interactivos que te ayudarán a comprender el panorama emprendedor del departamento.</p>
+      BLOQUE DE FILTROS 
+      <div class="filtros-dashboard">
+        <label>Edad mínima:
+          <input type="number" id="edad-min" min="0" placeholder="Ej: 18">
+        </label>
+        <label>Edad máxima:
+          <input type="number" id="edad-max" min="0" placeholder="Ej: 60">
+        </label>
+        <label>Tipo de trabajo:
+          <select id="tipo-trabajo" multiple>
+            <option value="4">Cuenta propia</option>
+            <option value="5">Patrón o empleador</option>
+          </select>
+        </label>
+        <label>Tipo de emprendimiento:
+          <select id="tipo-emprendimiento" multiple>
+          </select>
+        </label>
+        <label>Sexo:
+          <select id="sexo" multiple>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+          </select>
+        </label>
+        <label>Mes:
+          <select id="mes" multiple>
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+            <option value="Mayo">Mayo</option>
+            <option value="Junio">Junio</option>
+            <option value="Julio">Julio</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Septiembre">Septiembre</option>
+            <option value="Octubre">Octubre</option>
+            <option value="Noviembre">Noviembre</option>
+            <option value="Diciembre">Diciembre</option>
+          </select>
+        </label>
+      </div>
+      BUSCADOR Y DESCARGA 
+      <div class="acciones-tabla">
+        <input type="text" id="buscador-general" placeholder="Buscar en la tabla...">
+        <button onclick="descargarCSV()">Descargar CSV</button>
+      </div>
+       TABLA DE DATOS 
+      <div class="tabla-scroll">
+        <table id="tabla-emprendimiento">
+          <thead>
+            <tr>
+              <th onclick="ordenarTabla(0)">Edad</th>
+              <th onclick="ordenarTabla(1)">Tipo de trabajo</th>
+              <th onclick="ordenarTabla(2)">Tipo de emprendimiento</th>
+              <th onclick="ordenarTabla(3)">Sexo</th>
+              <th onclick="ordenarTabla(4)">Mes</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-body"></tbody>
+        </table>
+      </div> -->

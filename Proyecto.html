@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Comunitaria - Emprendimiento en Risaralda</title>
+  <link rel="stylesheet" href="Estilo_Proyecto.css">
+</head>
+<body>
+  <!-- Navegación superior fija -->
+  <nav>
+    <a href="#inicio" class="active">Inicio</a>
+    <a href="#emprendimiento">Emprender</a>
+    <a href="#organizaciones">Apoyo</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#test">Test</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#contacto">Recursos</a>
+    
+  </nav>
+
+  <!-- Flechas de navegación -->
+  <button class="arrow left" onclick="moveSlide(-1)">←</button>
+  <button class="arrow right" onclick="moveSlide(1)">→</button>
+
+  <!-- Contenedor principal horizontal -->
+  <main id="contenedor">
+    <section id="inicio">
+      <h1>RISARALDA VERDE Y EMPRENDEDORA</h1>
+      <p>Risaralda es cuna de personas talentosas, creativas y con espíritu emprendedor. En este espacio encontrarás toda la información, datos y recursos que necesitas para iniciar o fortalecer tu proyecto empresarial.</p>
+      <p>Nuestro objetivo es motivarte, conectarte con redes de apoyo y mostrarte cómo, a través del emprendimiento, se contribuye al progreso económico y social de nuestro departamento.</p>
+    </section>
+
+    <section id="emprendimiento">
+      <h2>¿Qué es el Emprendimiento y por qué es clave en Risaralda?</h2>
+      <p>El emprendimiento no solo es la creación de una empresa; es una actitud que impulsa a las personas a identificar oportunidades, resolver problemas y transformar ideas en soluciones que generan bienestar.</p>
+      <p>En Risaralda, los emprendedores son protagonistas en la generación de empleo, la innovación y el crecimiento económico. Además, el emprendimiento fortalece la inclusión, fomenta el desarrollo regional y contribuye al tejido social.</p>
+      <p>Aquí conocerás los conceptos esenciales, el contexto actual y noticias relevantes para comprender la importancia de emprender en nuestro territorio.</p>
+    </section>
+
+    <section id="organizaciones">
+      <h2>Organizaciones de Apoyo en Risaralda</h2>
+      <p>Para que un emprendimiento crezca, es fundamental contar con aliados, formación y recursos. En Risaralda existen redes, programas y organizaciones que trabajan día a día para acompañarte en cada etapa de tu camino emprendedor.</p>
+      <p>Conoce a las instituciones que te brindarán asesoría, capacitaciones, acceso a capital semilla, formalización y más oportunidades para llevar tu idea a otro nivel</p>
+      <br>
+      <br>
+      <br>
+      <div class="slider-container">
+        <button class="arrow-slider left" onclick="moveOrg(-1)">←</button>
+        
+        <div class="slider-track" id="orgSlider">
+          <div class="org-card">
+            <img src="risaraldaemprende.png" alt="Logo Risaralda Emprende">
+            <h3>Risaralda Emprende</h3>
+            <p>Estrategia que recorre los municipios ofreciendo formación práctica, asesorías personalizadas y acompañamiento para formalizar tu negocio. Facilita la participación en ferias y ruedas de negocio, impulsando tanto emprendimientos rurales como urbanos.</p>
+            <a href="https://www.risaraldaemprende.com" target="_blank">Ver sitio</a>
+          </div>
+          <div class="org-card">
+            <img src="risaraldaverdeyemprendedora.png" alt="Logo Ruta del Emprendimiento">
+            <h3>Ruta del Emprendimiento</h3>
+            <p>Formación práctica, asesorías y participación en ferias y ruedas de negocio.</p>
+            <a href="https://www.risaralda.gov.co" target="_blank">Ver sitio</a>
+          </div>
+          <div class="org-card">
+            <img src="Sena.jpg" alt="Logo SENA">
+            <h3>SENA</h3>
+            <p>El Fondo Emprender proporciona capital semilla no reembolsable para proyectos liderados por aprendices o egresados del SENA. El programa SENA Emprende Rural apoya iniciativas en zonas rurales, brindando formación técnica y fortalecimiento productivo.</p>
+            <a href="https://www.fondoemprender.com" target="_blank">Ver sitio</a>
+          </div>
+          <div class="org-card">
+            <img src="hechoenpereira.png" alt="Logo Hecho en Pereira">
+            <h3>Hecho en Pereira</h3>
+            <p>Programa que certifica productos y servicios locales, otorgando un sello distintivo que aumenta su visibilidad y facilita su comercialización a nivel nacional e internacional.</p>
+            <a href="https://www.instagram.com/hechoenpereira/" target="_blank">Ver sitio</a>
+          </div>
+          <div class="org-card">
+            <img src="cemprende.png" alt="Logo CEmprende">
+            <h3>CEmprende</h3>
+            <p>Centro nacional de emprendimiento e innovación con presencia y aliados en Risaralda.</p>
+            <a href="https://www.innpulsacolombia.com/cemprende" target="_blank">Ver sitio</a>
+          </div>
+          <div class="org-card">
+            <img src="camarapereira.png" alt="Logo Cámara de Comercio de Pereira">
+            <h3>Cámara de Comercio</h3>
+            <p>Promueve la formalización de empresas, organiza ferias, ofrece asesoría empresarial y facilita conexiones comerciales para emprendedores de todo el departamento.</p>
+            <a href="https://www.camarapereira.org.co" target="_blank">Ver sitio</a>
+          </div>
+        </div>
+        <button class="arrow-slider right" onclick="moveOrg(1)">→</button>
+      </div>
+    </section>
+
+    <section id="dashboard">
+      <h2>Dashboard de Emprendimiento en Risaralda</h2>
+
+      <!-- GRÁFICOS INTERACTIVOS -->
+  <div class="graficos-dinamicos">
+    <h3>Visualización Interactiva</h3>
+    <p>Selecciona un gráfico para visualizar tendencias y comparaciones relevantes.</p>
+  </div>
+
+  <div class="selector-grafico">
+    <label for="graficoSelect">Elige un gráfico:</label>
+    <select id="graficoSelect">
+      <option value="">-- Selecciona --</option>
+      <option value="barras">Emprendimiento Femenino en Risaralda</option>
+      <option value="torta">Participación por tipo de Sector</option>
+      <option value="lineas">Evolución del Emprendimiento</option>
+      <option value="area">Cantidad de Emprendedores por Género</option>
+    </select>
+  </div>
+
+  <div id="contenidoGrafico" style="display: none; margin-top: 2rem; text-align: center;">
+    <h3 id="tituloGrafico"></h3>
+    <p id="descripcionGrafico"></p>
+
+    <!-- Imagen que se mostrará según la selección -->
+    <img id="imagenGrafico" src="" alt="Gráfico seleccionado" style="max-width: 100%; height: auto; display: none;">
+  </div>
+    </section>
+
+    <section id="test">
+      <h2>Test de Capacidad Emprendedora</h2>
+      <p>¿Estás listo para conocer tu nivel de actitud emprendedora? Responde este test interactivo, seleccionando las opciones que más se ajusten a tu perfil. Al finalizar, recibirás un resultado estimado sobre tu capacidad actual para emprender.</p>
+      <!--<p>Este ejercicio te ayudará a identificar tus fortalezas y áreas por mejorar para convertirte en un emprendedor más preparado y exitoso.</p>  -->
+      <p>Responde cada afirmación según tu realidad. Usa la escala de 1 (Totalmente en desacuerdo) a 5 (Totalmente de acuerdo).</p>
+      <form id="emprendeTest">
+        <ol>
+          <li class="pregunta">Me adapto fácilmente a cambios en el entorno social o económico.<br>
+            <input type="radio" name="q1" value="1"> 1
+            <input type="radio" name="q1" value="2"> 2
+            <input type="radio" name="q1" value="3"> 3
+            <input type="radio" name="q1" value="4"> 4
+            <input type="radio" name="q1" value="5"> 5
+          </li><br>
+          <li class="pregunta">Identifico oportunidades de negocio en las problemáticas de mi entorno.<br>
+            <input type="radio" name="q2" value="1"> 1
+            <input type="radio" name="q2" value="2"> 2
+            <input type="radio" name="q2" value="3"> 3
+            <input type="radio" name="q2" value="4"> 4
+            <input type="radio" name="q2" value="5"> 5
+          </li><br>
+          <li class="pregunta">Asumo riesgos calculados cuando creo en el potencial de una idea.<br>
+            <input type="radio" name="q3" value="1"> 1
+            <input type="radio" name="q3" value="2"> 2
+            <input type="radio" name="q3" value="3"> 3
+            <input type="radio" name="q3" value="4"> 4
+            <input type="radio" name="q3" value="5"> 5
+          </li><br>
+          <li class="pregunta">Busco soluciones creativas a los retos que se presentan.<br>
+            <input type="radio" name="q4" value="1"> 1
+            <input type="radio" name="q4" value="2"> 2
+            <input type="radio" name="q4" value="3"> 3
+            <input type="radio" name="q4" value="4"> 4
+            <input type="radio" name="q4" value="5"> 5
+          </li><br>
+          <li class="pregunta">Confío en mis capacidades para iniciar y sostener un proyecto.<br>
+            <input type="radio" name="q5" value="1"> 1
+            <input type="radio" name="q5" value="2"> 2
+            <input type="radio" name="q5" value="3"> 3
+            <input type="radio" name="q5" value="4"> 4
+            <input type="radio" name="q5" value="5"> 5
+          </li><br>
+          <li class="pregunta">Me gusta actuar con autonomía y tomar decisiones por mí mismo/a.<br>
+            <input type="radio" name="q6" value="1"> 1
+            <input type="radio" name="q6" value="2"> 2
+            <input type="radio" name="q6" value="3"> 3
+            <input type="radio" name="q6" value="4"> 4
+            <input type="radio" name="q6" value="5"> 5
+          </li><br>
+          <li class="pregunta">Mantengo mis compromisos aunque enfrente dificultades.<br>
+            <input type="radio" name="q7" value="1"> 1
+            <input type="radio" name="q7" value="2"> 2
+            <input type="radio" name="q7" value="3"> 3
+            <input type="radio" name="q7" value="4"> 4
+            <input type="radio" name="q7" value="5"> 5
+          </li><br>
+          <li class="pregunta">Tomo la iniciativa para comenzar nuevos proyectos o ideas.<br>
+            <input type="radio" name="q8" value="1"> 1
+            <input type="radio" name="q8" value="2"> 2
+            <input type="radio" name="q8" value="3"> 3
+            <input type="radio" name="q8" value="4"> 4
+            <input type="radio" name="q8" value="5"> 5
+          </li><br>
+          <li class="pregunta">Me esfuerzo por capacitarme constantemente en temas de innovación y emprendimiento.<br>
+            <input type="radio" name="q9" value="1"> 1
+            <input type="radio" name="q9" value="2"> 2
+            <input type="radio" name="q9" value="3"> 3
+            <input type="radio" name="q9" value="4"> 4
+            <input type="radio" name="q9" value="5"> 5
+          </li><br>
+          <li class="pregunta">Me motiva generar un impacto positivo en mi comunidad a través de mis ideas.<br>
+            <input type="radio" name="q10" value="1"> 1
+            <input type="radio" name="q10" value="2"> 2
+            <input type="radio" name="q10" value="3"> 3
+            <input type="radio" name="q10" value="4"> 4
+            <input type="radio" name="q10" value="5"> 5
+          </li>
+        </ol>
+        <button id="botonFinal" type="button" onclick="calcular()">Calcular resultado</button>
+      </form>
+      <div id="resultado"></div>
+    </section>
+
+    <section id="noticias">
+      <h2>Noticias de Emprendimiento en Risaralda</h2>
+      <p>Conoce las noticias más recientes relacionadas con el emprendimiento en nuestro departamento. Aquí reunimos información clave, eventos, convocatorias y casos de éxito que te pueden inspirar o servir de guía para impulsar tu proyecto.</p>
+      
+      <div class="noticias-container">
+        <div class="noticia">
+            <h3>Convocatoria de Capital Semilla - Agosto 2025</h3>
+            <p>La Gobernación de Risaralda, en alianza con el SENA, abrió inscripciones para emprendedores que deseen acceder a fondos no reembolsables. La convocatoria estará vigente hasta el 15 de agosto.</p>
+            <a href="https://www.risaralda.gov.co" target="_blank">Más información</a>
+          </div>
+          <div class="noticia">
+            <h3>Caso de Éxito: Café Las Montañas</h3>
+            <p>Un emprendimiento rural de Santuario logró exportar su café artesanal a Europa gracias al acompañamiento de Risaralda Emprende y la Cámara de Comercio.</p>
+            <a href="https://www.camarapereira.org.co" target="_blank">Leer historia completa</a>
+          </div>
+          <div class="noticia">
+            <h3>Talleres gratuitos de Emprendimiento en Pereira</h3>
+            <p>CEmprende y la Universidad Tecnológica de Pereira realizarán talleres prácticos para jóvenes emprendedores durante septiembre. Cupos limitados.</p>
+            <a href="https://www.innpulsacolombia.com/cemprende" target="_blank">Inscríbete aquí</a>
+          </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto y Recursos</h2>
+      <p>El emprendimiento no se construye solo. Por eso, en esta sección encontrarás recursos, enlaces y contactos útiles para obtener más información, formación y acompañamiento en Risaralda.</p>
+      <p>Consulta los sitios oficiales, programas de apoyo y entidades que te acompañarán en tu camino emprendedor.</p>
+      <p>¡No dejes pasar la oportunidad de convertir tus ideas en realidad!</p>
+      <ul>
+        <li><a href="https://www.risaralda.gov.co" target="_blank">Gobernación de Risaralda</a></li>
+        <li><a href="https://www.camarapereira.org.co" target="_blank">Cámara de Comercio de Pereira</a></li>
+        <li><a href="https://www.risaraldaemprende.com" target="_blank">Red Departamental de Emprendimiento</a></li>
+    </ul>
+    </section>
+
+
+
+
+    
+  </main>
+
+  <!-- Modal para mostrar el resultado del test -->
+  <div id="miModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span onclick="cerrarModal()" class="close">&times;</span>
+      <p id="contenidoModal"></p>
+    </div>
+  </div>
+
+  <script src="JS_Proyecto.js"></script>
+</body>
+</html>
